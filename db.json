@@ -1,0 +1,59 @@
+{
+  "Images": [
+    {
+      "idImage": 0,
+      "idPost": 0,
+      "path": "https://source.unsplash.com/random/800x600"
+    }
+  ],
+  "Posts": [
+    {
+      "idPost": 0,
+      "content": "some comment",
+      "dateCreate": "",
+      "idUser":0,
+      "idAdmin":"admin1"
+    }
+  ],
+  "Comments": [
+      {
+      "idComment": 0,
+      "idPost": 0,
+      "idUser":0,
+      "content": "some comment",
+      "dateCreate": "",
+      "rank":1
+    }
+  ],
+  "Users": [
+      {
+      "idUser":0,
+      "dateOfBirth":"",
+      "address":"",
+      "userName":"",
+      "password":"",
+      "email":"",
+      "gender":""
+    }
+  ],
+  "Admin": [
+      {
+      "idAdmin":0,
+      "dateOfBirth":"",
+      "address":"",
+      "userName":"admin1",
+      "password":"",
+      "fullName":"",
+      "email":"",
+      "gender":""
+    }
+  ],
+  "Keywords": [
+      {
+      "idKeyword":0,
+      "category":"",
+      "score":0,
+      "content":"good"
+    }
+  ]
+}
