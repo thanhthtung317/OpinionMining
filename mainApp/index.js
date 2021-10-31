@@ -220,5 +220,12 @@ Bg3.addEventListener('click', () => {
     changeBG();
 })
 
-
+//TOGGLE COMMNET SECTION
+const viewComments = document.querySelector(".view-commnents");
+console.log([viewComments]);
+viewComments.onclick = () => {
+    const commentsSection = document.querySelector(".comment-section");
+    commentsSection.classList.toggle("display-none");
+   
+}
 // END

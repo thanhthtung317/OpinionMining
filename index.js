@@ -224,5 +224,4 @@ Bg3.addEventListener('click', () => {
     changeBG();
 })
 
-
 // END
