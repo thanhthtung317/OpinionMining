@@ -9,8 +9,8 @@
   "Posts": [
     {
       "idPost": 0,
-      "content": "some comment",
-      "dateCreate": "",
+      "content": "The weather today is soo hazy...",
+      "dateCreate": "10 minutes ago",
       "idUser":0,
       "idAdmin":"admin1"
     }
@@ -20,39 +20,39 @@
       "idComment": 0,
       "idPost": 0,
       "idUser":0,
-      "content": "some comment",
-      "dateCreate": "",
+      "content": "some comment, just to make this longer otherwise it would be too short, so you don't need to read this commnet btw",
+      "dateCreate": "10 minutes ago",
       "rank":1
     }
   ],
   "Users": [
       {
       "idUser":0,
-      "dateOfBirth":"",
-      "address":"",
-      "userName":"",
-      "password":"",
-      "email":"",
-      "gender":""
+      "dateOfBirth":"07/09/1998",
+      "address":"CA",
+      "userName":"little fox",
+      "password":"1234",
+      "email":"fox@email.com",
+      "gender":"male"
     }
   ],
   "Admin": [
       {
       "idAdmin":0,
-      "dateOfBirth":"",
-      "address":"",
+      "dateOfBirth":"06/09/1997",
+      "address":"NA",
       "userName":"admin1",
-      "password":"",
-      "fullName":"",
-      "email":"",
-      "gender":""
+      "password":"1234",
+      "fullName":"Max Lawson",
+      "email":"maxlawson@email.com",
+      "gender":"mail"
     }
   ],
   "Keywords": [
       {
       "idKeyword":0,
       "category":"",
-      "score":0,
+      "score":10,
       "content":"good"
     }
   ]
