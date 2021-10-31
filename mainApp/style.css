@@ -362,6 +362,20 @@ main .container .left .profile {
 }
 
 /* ---------------------- FEEDS --------------------- */
+.user-comment img{
+  width: 5%;
+  height: 5%
+}
+
+.user-comment{
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-comment-body{
+  margin-left: 1em;
+}
+
 .comment-input{
   height:5vh;
   display: flex;
