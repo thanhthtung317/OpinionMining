@@ -3,9 +3,6 @@ const menuItems = document.querySelectorAll('.menu-item');
 
 // MESSAGES
 const messagesNotification = document.querySelector('#messages-notification');
-const messages = document.querySelector('.messages');
-const message = messages.querySelectorAll('.message');
-const messageSearch = document.querySelector('#message-search');
 
 // THEME
 const theme = document.querySelector('#theme');
@@ -55,20 +52,6 @@ const searchMessage = () => {
         }
     })
 }
-
-// search chat
-messageSearch.addEventListener('keyup', searchMessage);
-
-// hightlight messages card when messages menu item is clicked
-messagesNotification.addEventListener('click', () => {
-    messages.style.boxShadow = '0 0 1rem var(--color-primary)';
-    messagesNotification.querySelector('.notification-count').style.display = 'none';
-    setTimeout(() => {
-        messages.style.boxShadow = 'none';
-    }, 2000);
-})
-
-
 
 // THEME/DISPLAY CUSTOMIZATION
 
@@ -222,7 +205,6 @@ Bg3.addEventListener('click', () => {
 
 //TOGGLE COMMNET SECTION
 const viewComments = document.querySelector(".view-commnents");
-console.log([viewComments]);
 viewComments.onclick = () => {
     const commentsSection = document.querySelector(".comment-section");
     commentsSection.classList.toggle("display-none");

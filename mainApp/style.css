@@ -805,6 +805,7 @@ MEDIA QUERIES FOR SMALL TABLETS AND MOBILE PHONES
     position: absolute;
     left: -20rem;
     width: 20rem;
+    display: block;
   }
 
   .left .notifications-popup::before {
@@ -842,4 +843,8 @@ MEDIA QUERIES FOR SMALL TABLETS AND MOBILE PHONES
 
 .display-none{
   display: none;
+}
+
+.display-block{
+  display: block;
 }
