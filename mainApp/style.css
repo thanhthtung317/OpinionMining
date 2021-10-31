@@ -253,7 +253,6 @@ main .container .left .profile {
   padding: var(--card-padding);
   box-shadow: 0 0 2rem hsl(var(--color-primary), 75%, 60% 25%);
   z-index: 8;
-  display: none;
 }
 
 .left .notifications-popup::before {
@@ -367,6 +366,7 @@ main .container .left .profile {
 }
 
 .user-comment img{
+  min-width:23px;
   width: 8%;
   height: 8%
   
@@ -387,6 +387,7 @@ main .container .left .profile {
 }
 
 .comment-input{
+  margin-top: 1em;
   height:5vh;
   display: flex;
   justify-content: space-between;
