@@ -365,6 +365,10 @@ main .container .left .profile {
   cursor: pointer;
 }
 
+.comment-section{
+  display: none;
+}
+
 .user-comment img{
   min-width:23px;
   width: 8%;

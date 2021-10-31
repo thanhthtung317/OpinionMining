@@ -192,7 +192,7 @@ Bg3.addEventListener('click', () => {
 const viewComments = document.querySelector(".view-commnents");
 viewComments.onclick = () => {
     const commentsSection = document.querySelector(".comment-section");
-    commentsSection.classList.toggle("display-none");
+    commentsSection.classList.toggle("display-block");
    
 }
 // END
