@@ -242,7 +242,15 @@ createPostBtn.addEventListener("click", (e) => {
   createPost(postContent);
 });
 
+//RENDER POSTS
 
-console.log(getDate());
+async function renderPosts(){
+    const response = await axios.get("http://localhost:3000/Posts")
+    for (let i = 0; i < response.data.length; i++) {
+        addFeed(response.data[i]);
+    }
+}
+
+renderPosts()
 
 // END

@@ -1,6 +1,6 @@
-function addFeed() {
+function addFeed(post) {
   let newFeeds = document.querySelector(".feeds");
-//   let { userName } = user;
+  let { content } = post;
 //   let { dayCreate, content } = postContent;
 //   let { idImage, path } = img;
   if (newFeeds) {
@@ -26,7 +26,7 @@ function addFeed() {
                             <img src="./images/feed-1.jpg">
                         </div>
                         <div class="caption">
-                            <p><b>Lana Rose</b> Lorem ipsum dolor sit quisquam eius. <span class="harsh-tag">#lifestyle</span></p>
+                            <p>${content}</p>
                         </div>
                         <div class="comments text-muted view-commnents">View all comments</div>
                         <div class="comment-section">
