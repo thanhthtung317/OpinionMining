@@ -1,59 +1,80 @@
 {
   "Images": [
     {
-      "idImage": 0,
+      "id": 0,
       "idPost": 0,
       "path": "https://source.unsplash.com/random/800x600"
     }
   ],
   "Posts": [
     {
-      "idPost": 0,
+      "id": 0,
       "content": "The weather today is soo hazy...",
       "dateCreate": "10 minutes ago",
-      "idUser":0,
-      "idAdmin":"admin1"
+      "idUser": 0,
+      "idAdmin": "admin1"
+    },
+    {
+      "content": "The weather today is soo hazy...",
+      "dateCreate": "10 minutes ago",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "id": 1
+    },
+    {
+      "content": "hello world",
+      "dateCreate": "10 minutes ago",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "id": 2
+    },
+    {
+      "content": "how it going",
+      "dateCreate": "15/11/2021 - 23:4:18",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "id": 3
     }
   ],
   "Comments": [
-      {
-      "idComment": 0,
+    {
+      "id": 0,
       "idPost": 0,
-      "idUser":0,
+      "idUser": 0,
       "content": "some comment, just to make this longer otherwise it would be too short, so you don't need to read this commnet btw",
       "dateCreate": "10 minutes ago",
-      "rank":1
+      "rank": 1
     }
   ],
   "Users": [
-      {
-      "idUser":0,
-      "dateOfBirth":"07/09/1998",
-      "address":"CA",
-      "userName":"little fox",
-      "password":"1234",
-      "email":"fox@email.com",
-      "gender":"male"
+    {
+      "id": 0,
+      "dateOfBirth": "07/09/1998",
+      "address": "CA",
+      "userName": "little fox",
+      "password": "1234",
+      "email": "fox@email.com",
+      "gender": "male"
     }
   ],
   "Admin": [
-      {
-      "idAdmin":0,
-      "dateOfBirth":"06/09/1997",
-      "address":"NA",
-      "userName":"admin1",
-      "password":"1234",
-      "fullName":"Max Lawson",
-      "email":"maxlawson@email.com",
-      "gender":"mail"
+    {
+      "id": 0,
+      "dateOfBirth": "06/09/1997",
+      "address": "NA",
+      "userName": "admin1",
+      "password": "1234",
+      "fullName": "Max Lawson",
+      "email": "maxlawson@email.com",
+      "gender": "mail"
     }
   ],
   "Keywords": [
-      {
-      "idKeyword":0,
-      "category":"",
-      "score":10,
-      "content":"good"
+    {
+      "id": 0,
+      "category": "",
+      "score": 10,
+      "content": "good"
     }
   ]
 }
