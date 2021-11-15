@@ -189,29 +189,36 @@ Bg3.addEventListener('click', () => {
 })
 
 //TOGGLE COMMNET SECTION
-const viewComments = document.querySelector(".view-commnents");
-viewComments.onclick = () => {
-    const commentsSection = document.querySelector(".comment-section");
-    commentsSection.classList.toggle("display-block");
-   
+const viewComments = document.querySelectorAll(".view-commnents");
+console.log(viewComments)
+for (let i = 0; i < viewComments.length; i++) {
+    viewComments[i].onclick = (e) =>{
+        e.target.classList.toggle("display-block");
+    }
 }
+// viewComments.onclick = () => {
+//     const commentsSection = document.querySelector(".comment-section");
+//     commentsSection.classList.toggle("display-block");
+   
+// }
 
 //NEWFEEDS
 import addFeed from './feedHandler.js';
 
+addFeed();
+addFeed();
 addFeed();
 
 //GET DATE 
 function getDate(){
     var currentdate = new Date();
     var datetime =
-    "Last Sync: " +
     currentdate.getDate() +
     "/" +
     (currentdate.getMonth() + 1) +
     "/" +
     currentdate.getFullYear() +
-    " @ " +
+    " - " +
     currentdate.getHours() +
     ":" +
     currentdate.getMinutes() +
@@ -220,5 +227,6 @@ function getDate(){
     return datetime;
 }
 
+console.log(getDate());
 
 // END
