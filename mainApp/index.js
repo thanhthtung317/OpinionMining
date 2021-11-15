@@ -189,18 +189,18 @@ Bg3.addEventListener('click', () => {
 })
 
 //TOGGLE COMMNET SECTION
-const viewComments = document.querySelectorAll(".view-commnents");
-console.log(viewComments)
-for (let i = 0; i < viewComments.length; i++) {
-    viewComments[i].onclick = (e) =>{
-        e.target.classList.toggle("display-block");
-    }
-}
-// viewComments.onclick = () => {
-//     const commentsSection = document.querySelector(".comment-section");
-//     commentsSection.classList.toggle("display-block");
-   
+const viewComments = document.querySelector(".view-commnents");
+// console.log(viewComments)
+// for (let i = 0; i < viewComments.length; i++) {
+//     viewComments[i].onclick = (e) =>{
+//         e.target.classList.toggle("display-block");
+//     }
 // }
+viewComments.onclick = () => {
+    const commentsSection = document.querySelector(".comment-section");
+    commentsSection.classList.toggle("display-block");
+   
+}
 
 //NEWFEEDS
 import addFeed from './feedHandler.js';
