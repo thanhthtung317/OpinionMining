@@ -195,4 +195,30 @@ viewComments.onclick = () => {
     commentsSection.classList.toggle("display-block");
    
 }
+
+//NEWFEEDS
+import addFeed from './feedHandler.js';
+
+addFeed();
+
+//GET DATE 
+function getDate(){
+    var currentdate = new Date();
+    var datetime =
+    "Last Sync: " +
+    currentdate.getDate() +
+    "/" +
+    (currentdate.getMonth() + 1) +
+    "/" +
+    currentdate.getFullYear() +
+    " @ " +
+    currentdate.getHours() +
+    ":" +
+    currentdate.getMinutes() +
+    ":" +
+    currentdate.getSeconds();
+    return datetime;
+}
+
+
 // END
