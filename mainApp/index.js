@@ -246,7 +246,7 @@ createPostBtn.addEventListener("click", (e) => {
 
 async function renderPosts(){
     const response = await axios.get("http://localhost:3000/Posts")
-    for (let i = 0; i < response.data.length; i++) {
+    for (let i = response.data.length-1; i >=0 ; i--) {
         addFeed(response.data[i]);
     }
 }

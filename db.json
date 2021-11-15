@@ -15,11 +15,25 @@
       "idAdmin": "admin1"
     },
     {
-      "content": "skdfjoijjfoisjfoijfsjfoisjfojf",
-      "dateCreate": "15/11/2021 - 23:6:23",
+      "content": "hello world",
+      "dateCreate": "15/11/2021 - 23:21:58",
       "idUser": 0,
       "idAdmin": "admin1",
       "id": 1
+    },
+    {
+      "content": "vậy là gì mình còn phải sử lý comment, login và register nữa!",
+      "dateCreate": "15/11/2021 - 23:25:17",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "id": 2
+    },
+    {
+      "content": "make it possible!",
+      "dateCreate": "15/11/2021 - 23:26:57",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "id": 3
     }
   ],
   "Comments": [
