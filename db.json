@@ -20,29 +20,35 @@
       "idUser": 0,
       "idAdmin": "admin1",
       "id": 1
+    },
+    {
+      "content": "ditme cay vl",
+      "dateCreate": "16/11/2021 - 22:34:58",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "id": 2
     }
   ],
-  "Comments":[
+  "Comments": [
     {
-      "id":0,
+      "id": 0,
       "content": "this is a sample comment",
       "dateCreate": "16/11/2021 - 15:38:52",
       "idUser": 0,
       "idAdmin": "admin1",
-      "idPost":0,
+      "idPost": 0,
       "Rating": "good"
     },
     {
-      "id":1,
+      "id": 1,
       "content": "this is a sample comment 2",
       "dateCreate": "16/11/2021 - 15:38:52",
       "idUser": 0,
       "idAdmin": "admin1",
-      "idPost":0,
+      "idPost": 0,
       "Rating": "bad"
     }
-  ]
-  ,
+  ],
   "Users": [
     {
       "id": 0,

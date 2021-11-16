@@ -307,7 +307,7 @@ main .container .left .profile {
 }
 
 .comment-section{
-  display: none;
+  display: block;
 }
 
 .user-comment img{
