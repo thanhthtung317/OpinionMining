@@ -1,9 +1,10 @@
 function addFeed(post) {
   let newFeeds = document.querySelector(".feeds");
-  let { content } = post;
+  let { content, dateCreate } = post;
 //   let { dayCreate, content } = postContent;
 //   let { idImage, path } = img;
   if (newFeeds) {
+      
     const feed = document.createElement("div");
     feed.classList.add("feed");
     feed.innerHTML = `
@@ -14,7 +15,7 @@ function addFeed(post) {
                                 </div>
                                 <div class="ingo">
                                     <h3>Somebody</h3>
-                                    <small>15 MINUTES AGO</small>
+                                    <small>${dateCreate}</small>
                                 </div>
                             </div>
                             <span class="edit">
@@ -36,7 +37,7 @@ function addFeed(post) {
                                 <div class="user-comment-body">
                                     <div class="user-name-and-content">
                                         <h4 class="user-name">Somebody </h4>
-                                        <p class="comment-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore et reiciendis suscipit inventore quia nam, ab alias pariatur nulla!</p>
+                                        <p class="${getComment(0)}comment-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore et reiciendis suscipit inventore quia nam, ab alias pariatur nulla!</p>
                                     </div>
                                     <h4 class="comment-ranking">Comment rank: 4</h4>
                                 </div>
@@ -56,8 +57,16 @@ function addFeed(post) {
   }
 }
 
-export function addComment(comment){
-    
+async function getComment(postId){
+    const res = await axios.get("http://localhost:3000/Comments");
+    const comments = res.data.filter((comment) => {
+        if (comment.idPost === postId) {
+            return comment;
+        }
+    });
+    console.log(`post id ${postId} has comments:`)
+    console.log(comments);
+    return comments;
 }
 
 export default addFeed;

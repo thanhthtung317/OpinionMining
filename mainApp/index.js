@@ -200,18 +200,7 @@ function getDate() {
 }
 
 
-//TOGGLE COMMNET SECTION
-const viewComments = document.querySelector(".view-commnents");
-// console.log(viewComments)
-// for (let i = 0; i < viewComments.length; i++) {
-//     viewComments[i].onclick = (e) =>{
-//         e.target.classList.toggle("display-block");
-//     }
-// }
-viewComments.onclick = () => {
-  const commentsSection = document.querySelector(".comment-section");
-  commentsSection.classList.toggle("display-block");
-};
+
 
 //NEWFEEDS
 import addFeed from "./feedHandler.js";
@@ -232,7 +221,7 @@ async function createPost(content) {
   };
   try {
     console.log(newPost);
-    await axios.post("http://localhost:3000/Posts", newPost);
+    const res = await axios.post("http://localhost:3000/Posts", newPost);
   } catch (error) {
     console.error(error);
   }
@@ -253,4 +242,21 @@ async function renderPosts(){
 
 renderPosts()
 
+//ADD COMMENT
+let newFeeds = document.querySelector(".feeds");
+
+
+//TOGGLE COMMNET SECTION
+const commentSections = document.querySelectorAll(".view-commnents");
+console.log(commentSections);
+for (let i = 0; i < commentSections.length; ++i) {
+  commentSections[i].onclick = (e) => {
+    e.target.classList.toggle("display-block");
+    console.log(e.target);
+  };
+}
+// viewComments.onclick = () => {
+//   const commentsSection = document.querySelector(".comment-section");
+//   commentsSection.classList.toggle("display-block");
+// };
 // END
