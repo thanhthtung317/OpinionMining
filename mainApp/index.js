@@ -247,21 +247,43 @@ let newFeeds = document.querySelector(".feeds");
 
 
 //TOGGLE COMMNET SECTION
-const commentSections = document.querySelectorAll(".view-commnents");
-console.log(commentSections);
-for (let i = 0; i < commentSections.length; ++i) {
-  commentSections[i].onclick = (e) => {
-    e.target.classList.toggle("display-block");
-    console.log(e.target);
-  };
-}
+
+var divArray = document.getElementsByClassName("feeds")[0];
+
+var observer = new MutationObserver(function(){
+  var commentSections = document.getElementsByClassName("view-commnents");
+   for (
+     let i = 0;
+     i < document.getElementsByClassName("view-commnents").length;
+     ++i
+   ) {
+     commentSections[i].onclick = (e) => {
+        e.target.classList.toggle("display-block");
+        const parentNode = String(e.target.classList[0]);
+        const parentNodeId = parentNode.charAt(parentNode.length-1)
+        const childNode = document.getElementsByClassName(
+          `comment-section${parentNodeId}`
+        )[0];
+        childNode.classList.toggle("display-none");
+        console.log(childNode);
+     };
+   }
+});
+
+observer.observe(divArray, { attributes: false, childList: true, subtree: true });
+
+// When you've got what you need, you should call this function to trigger a disconnect 
+function classesFound(){
+   observer.disconnect();
+};
 
 //ADD COMMENT
-const newCommentContent = document.querySelector("#comment-input");
-let commentContent = '';
-newCommentContent.oninput = (e) => {
-  commentContent = e.target.value;
-  console.log(commentContent);
-};
+const newCommentContent = document.getElementsByClassName("comment-input");
+console.log(newCommentContent);
+// let commentContent = '';
+// newCommentContent.oninput = (e) => {
+//   commentContent = e.target.value;
+//   console.log(commentContent);
+// };
 
 // END

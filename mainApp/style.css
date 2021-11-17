@@ -302,12 +302,13 @@ main .container .left .profile {
 }
 
 /* ---------------------- FEEDS --------------------- */
-.view-commnents{
+.view-commnents .toggle-comments{
   cursor: pointer;
 }
 
 .comment-section{
   display: block;
+  color: black;
 }
 
 .user-comment img{

@@ -22,7 +22,7 @@
       "id": 1
     },
     {
-      "content": "ditme cay vl",
+      "content": "happy birthday",
       "dateCreate": "16/11/2021 - 22:34:58",
       "idUser": 0,
       "idAdmin": "admin1",
@@ -43,11 +43,25 @@
       "id": 4
     },
     {
-      "content": "i feel sick ",
+      "content": "i feel awesome",
       "dateCreate": "17/11/2021 - 16:31:15",
       "idUser": 0,
       "idAdmin": "admin1",
       "id": 5
+    },
+    {
+      "content": "tllkjadflk;ajlk;sjdl;js sf lsd fjlkskfj",
+      "dateCreate": "17/11/2021 - 23:20:41",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "id": 6
+    },
+    {
+      "content": "tllkjadflk;ajlk;sjdl;js sf lsd fjlkskfj",
+      "dateCreate": "17/11/2021 - 23:20:41",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "id": 7
     }
   ],
   "Comments": [
@@ -57,7 +71,7 @@
       "dateCreate": "16/11/2021 - 15:38:52",
       "idUser": 0,
       "idAdmin": "admin1",
-      "idPost": 0,
+      "idPost": 5,
       "rating": "good"
     },
     {
@@ -66,7 +80,7 @@
       "dateCreate": "16/11/2021 - 15:38:52",
       "idUser": 0,
       "idAdmin": "admin1",
-      "idPost": 3,
+      "idPost": 5,
       "rating": "bad"
     },
     {
@@ -75,7 +89,7 @@
       "dateCreate": "16/11/2021 - 15:38:52",
       "idUser": 0,
       "idAdmin": "admin1",
-      "idPost": 3,
+      "idPost": 5,
       "rating": "bad"
     }
   ],

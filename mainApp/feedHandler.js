@@ -1,5 +1,5 @@
 function addFeed(post) {
-    let newFeeds = document.querySelector(".feeds");
+    const newFeeds = document.querySelector(".feeds");
     let { content, dateCreate, id } = post;
     let commentsRendered = "";
     (async () => {
@@ -28,11 +28,13 @@ function addFeed(post) {
                         <div class="caption">
                             <p>${content}</p>
                         </div>
-                        <div class="comments text-muted view-commnents">View all comments</div>
-                        <div class="comment-section">
-                            <!-- comment -->
-                            ${commentsRendered}
-                            <!-- end of comment  -->
+                        <div class="comments text-muted view-commnents">
+                            <p class="toggle-comments${id} toggle-comments">View all comments</p>
+                            <div class="comment-section${id} comment-section">
+                                <!-- comment -->
+                                ${commentsRendered}
+                                <!-- end of comment  -->
+                            </div>
                         </div>
                         <div class="comment-input-section">
                             <div class="comment">
