@@ -255,4 +255,13 @@ for (let i = 0; i < commentSections.length; ++i) {
     console.log(e.target);
   };
 }
+
+//ADD COMMENT
+const newCommentContent = document.querySelector("#comment-input");
+let commentContent = '';
+newCommentContent.oninput = (e) => {
+  commentContent = e.target.value;
+  console.log(commentContent);
+};
+
 // END
