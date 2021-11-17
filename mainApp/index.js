@@ -199,9 +199,6 @@ function getDate() {
   return datetime;
 }
 
-
-
-
 //NEWFEEDS
 import addFeed from "./feedHandler.js";
 //ADD NEW POST
@@ -233,57 +230,97 @@ createPostBtn.addEventListener("click", (e) => {
 
 //RENDER POSTS
 
-async function renderPosts(){
-    const response = await axios.get("http://localhost:3000/Posts")
-    for (let i = response.data.length-1; i >=0 ; i--) {
-        addFeed(response.data[i]);
-    }
+async function renderPosts() {
+  const response = await axios.get("http://localhost:3000/Posts");
+  for (let i = response.data.length - 1; i >= 0; i--) {
+    addFeed(response.data[i]);
+  }
 }
 
-renderPosts()
+renderPosts();
 
 //ADD COMMENT
 let newFeeds = document.querySelector(".feeds");
-
 
 //TOGGLE COMMNET SECTION
 
 var divArray = document.getElementsByClassName("feeds")[0];
 
-var observer = new MutationObserver(function(){
+var observer = new MutationObserver(function () {
   var commentSections = document.getElementsByClassName("view-commnents");
-   for (
-     let i = 0;
-     i < document.getElementsByClassName("view-commnents").length;
-     ++i
-   ) {
-     commentSections[i].onclick = (e) => {
-        e.target.classList.toggle("display-block");
-        const parentNode = String(e.target.classList[0]);
-        const parentNodeId = parentNode.charAt(parentNode.length-1)
-        const childNode = document.getElementsByClassName(
-          `comment-section${parentNodeId}`
-        )[0];
-        childNode.classList.toggle("display-none");
-        console.log(childNode);
-     };
-   }
+  for (
+    let i = 0;
+    i < document.getElementsByClassName("view-commnents").length;
+    ++i
+  ) {
+    commentSections[i].onclick = (e) => {
+      e.target.classList.toggle("display-block");
+      const parentNode = String(e.target.classList[0]);
+      const parentNodeId = parentNode.charAt(parentNode.length - 1);
+      const childNode = document.getElementsByClassName(
+        `comment-section${parentNodeId}`
+      )[0];
+      childNode.classList.toggle("display-none");
+      console.log(childNode);
+    };
+  }
 });
 
-observer.observe(divArray, { attributes: false, childList: true, subtree: true });
+observer.observe(divArray, {
+  attributes: false,
+  childList: true,
+  subtree: true,
+});
 
-// When you've got what you need, you should call this function to trigger a disconnect 
-function classesFound(){
-   observer.disconnect();
-};
+// When you've got what you need, you should call this function to trigger a disconnect
+function classesFound() {
+  observer.disconnect();
+}
 
 //ADD COMMENT
-const newCommentContent = document.getElementsByClassName("comment-input");
-console.log(newCommentContent);
-// let commentContent = '';
-// newCommentContent.oninput = (e) => {
-//   commentContent = e.target.value;
-//   console.log(commentContent);
-// };
+var observer = new MutationObserver(function () {
+  var commentInputSections = document.getElementsByClassName("comment-input");
+  for (let i = 0; i < commentInputSections.length; ++i) {
+    commentInputSections[i].onclick = (e) => {
+      const commentInput = String(e.target.classList[0]);
+      const commentInputId = commentInput.charAt(commentInput.length - 1);
+      console.log(commentInputId);
+      const createPostBtn = document.getElementsByClassName(
+        `btn-create-comment${commentInputId}`
+      )[0];
+      console.log(createPostBtn);
+      e.target.oninput = (e) => {
+        postContent = e.target.value;
+        console.log(commentInputId, postContent);
+      };
+      createPostBtn.addEventListener("click", (e) => {
+        createComment(postContent, Number(commentInputId));
+      });
+    };
+  }
+});
+
+observer.observe(divArray, {
+  attributes: false,
+  childList: true,
+  subtree: true,
+});
+
+async function createComment(content, idPost) {
+  const newComment = {
+    content,
+    dateCreate: getDate(),
+    idUser: 0,
+    idAdmin: "admin1",
+    idPost,
+    rating: "good",
+  };
+  try {
+    console.log(newComment);
+    const res = await axios.post("http://localhost:3000/Comments", newComment);
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 // END

@@ -71,7 +71,7 @@
       "dateCreate": "16/11/2021 - 15:38:52",
       "idUser": 0,
       "idAdmin": "admin1",
-      "idPost": 5,
+      "idPost": 7,
       "rating": "good"
     },
     {
@@ -80,7 +80,7 @@
       "dateCreate": "16/11/2021 - 15:38:52",
       "idUser": 0,
       "idAdmin": "admin1",
-      "idPost": 5,
+      "idPost": 7,
       "rating": "bad"
     },
     {
@@ -91,6 +91,15 @@
       "idAdmin": "admin1",
       "idPost": 5,
       "rating": "bad"
+    },
+    {
+      "content": "jfdojofjo",
+      "dateCreate": "18/11/2021 - 0:35:1",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "idPost": 7,
+      "rating": "good",
+      "id": 3
     }
   ],
   "Users": [

@@ -39,9 +39,9 @@ function addFeed(post) {
                         <div class="comment-input-section">
                             <div class="comment">
                                 <i class="uil uil-comment-dots"></i>
-                                <input class="comment-input" type="text" placeholder="What do you think?">
+                                <input class="comment-input${id} comment-input" type="text" placeholder="What do you think?">
                             </div>
-                            <button class="btn btn-primary" type='submit'>Reply</button>
+                            <button class="btn-create-comment${id} btn btn-primary" type='submit'>Reply</button>
                         </div>
                     `;
 
