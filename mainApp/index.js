@@ -255,8 +255,4 @@ for (let i = 0; i < commentSections.length; ++i) {
     console.log(e.target);
   };
 }
-// viewComments.onclick = () => {
-//   const commentsSection = document.querySelector(".comment-section");
-//   commentsSection.classList.toggle("display-block");
-// };
 // END

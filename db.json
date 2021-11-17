@@ -27,17 +27,31 @@
       "idUser": 0,
       "idAdmin": "admin1",
       "id": 2
+    },
+    {
+      "content": "too tired",
+      "dateCreate": "17/11/2021 - 14:9:0",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "id": 3
+    },
+    {
+      "content": "now i need to make the post comment function ",
+      "dateCreate": "17/11/2021 - 16:16:32",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "id": 4
     }
   ],
   "Comments": [
     {
       "id": 0,
-      "content": "this is a sample comment",
+      "content": "this is a sample comment and i put modre for experimental problem sorry if it may distract you i'm really sorry for that if it may happen if sdjfsdjfsdhjfshklfosifo sd fsdf sf sa fhdsf fnds fhskf suifh sdfns fis fsfhskfh iuasf nfks fofo sfsd fsdfh sfsdf so ",
       "dateCreate": "16/11/2021 - 15:38:52",
       "idUser": 0,
       "idAdmin": "admin1",
       "idPost": 0,
-      "Rating": "good"
+      "rating": "good"
     },
     {
       "id": 1,
@@ -45,8 +59,17 @@
       "dateCreate": "16/11/2021 - 15:38:52",
       "idUser": 0,
       "idAdmin": "admin1",
-      "idPost": 0,
-      "Rating": "bad"
+      "idPost": 3,
+      "rating": "bad"
+    },
+    {
+      "id": 2,
+      "content": "this is a sample comment 2",
+      "dateCreate": "16/11/2021 - 15:38:52",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "idPost": 3,
+      "rating": "bad"
     }
   ],
   "Users": [
