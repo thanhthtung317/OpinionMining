@@ -148,6 +148,14 @@ main .container {
 }
 
 /* =================== LEFT ================ */
+.profile-text{
+  cursor: pointer;
+}
+
+.logout-item{
+  color: black;
+}
+
 main .container .left {
   height: max-content;
   position: sticky;

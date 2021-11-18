@@ -294,6 +294,7 @@ var observer = new MutationObserver(function () {
         console.log(commentInputId, postContent);
       };
       createPostBtn.addEventListener("click", (e) => {
+        e.preventDefault();
         createComment(postContent, Number(commentInputId));
       });
     };

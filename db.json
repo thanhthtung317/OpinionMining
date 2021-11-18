@@ -91,6 +91,51 @@
       "idAdmin": "admin1",
       "idPost": 5,
       "rating": "bad"
+    },
+    {
+      "content": "as;dlkjf;sldfj;ls",
+      "dateCreate": "18/11/2021 - 21:31:36",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "idPost": 6,
+      "rating": "good",
+      "id": 3
+    },
+    {
+      "content": "sdfsf",
+      "dateCreate": "18/11/2021 - 21:33:5",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "idPost": 7,
+      "rating": "good",
+      "id": 4
+    },
+    {
+      "content": "sdfsfsdfsdfsdfdfadfafasdf",
+      "dateCreate": "18/11/2021 - 21:33:30",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "idPost": 7,
+      "rating": "good",
+      "id": 5
+    },
+    {
+      "content": "sdfsdffsd",
+      "dateCreate": "18/11/2021 - 21:34:1",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "idPost": 6,
+      "rating": "good",
+      "id": 6
+    },
+    {
+      "content": "this is sample",
+      "dateCreate": "18/11/2021 - 21:34:15",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "idPost": 6,
+      "rating": "good",
+      "id": 7
     }
   ],
   "Users": [
@@ -102,6 +147,15 @@
       "password": "1234",
       "email": "fox@email.com",
       "gender": "male"
+    },
+    {
+      "userName": "thanhtung",
+      "password": "1234",
+      "address": "dfjksdjf",
+      "email": "fjsdlkfj@dfsf",
+      "gender": "male",
+      "dateOfBirth": "2021-11-24",
+      "id": 5
     }
   ],
   "Admin": [
