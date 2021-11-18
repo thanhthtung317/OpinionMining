@@ -14,31 +14,26 @@ passwordDOM.oninput = (e) => {
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
-    location.replace(
-      "../mainApp/index.html"
-    );
+    (async () => {
+      const users = await getUsers();
+      console.log(users[0].userName);
+      console.log(users[0].password);
+
+      for(let i = 0; i < users.length; i++){
+        if (users[i].userName === username && users[i].password === password){
+          location.replace(
+            "../mainApp/index.html"
+          );
+        }
+      }
+    })()
 })
-
-async function basiclogin(username, password) {
-  const response = await axios.post(loginEndpoint, {
-    auth: {
-      username: username,
-      password: password,
-    }
-  });
-  const { token } = response.body;
-  localStorage.setItem("token", token);
+async function getUsers() {
+  try {
+    const response = await axios.get("http://localhost:3000/Users");
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
 }
-
-function getUsername(){
-    email.oninput = (e)=>{
-        let username = e.target.value;
-    }
-    return username;
-}
-
-async function isLoggedIn() {
-  const token = store.get("token");
-  if (!token) return false;
-}
-
