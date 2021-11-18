@@ -100,6 +100,69 @@
       "idPost": 7,
       "rating": "good",
       "id": 3
+    },
+    {
+      "content": "hellow dsljflsd;f",
+      "dateCreate": "18/11/2021 - 0:36:27",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "idPost": 7,
+      "rating": "good",
+      "id": 4
+    },
+    {
+      "content": "kfdl;k;lfk;f",
+      "dateCreate": "18/11/2021 - 0:37:37",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "idPost": 7,
+      "rating": "good",
+      "id": 5
+    },
+    {
+      "content": "xin chào bạn!",
+      "dateCreate": "18/11/2021 - 0:37:57",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "idPost": 7,
+      "rating": "good",
+      "id": 6
+    },
+    {
+      "content": "hola",
+      "dateCreate": "18/11/2021 - 0:39:32",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "idPost": 5,
+      "rating": "good",
+      "id": 7
+    },
+    {
+      "content": "this is one of the test comments",
+      "dateCreate": "18/11/2021 - 0:39:56",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "idPost": 0,
+      "rating": "good",
+      "id": 8
+    },
+    {
+      "content": "hellu",
+      "dateCreate": "18/11/2021 - 20:28:5",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "idPost": 7,
+      "rating": "good",
+      "id": 9
+    },
+    {
+      "content": "no one care",
+      "dateCreate": "18/11/2021 - 20:31:31",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "idPost": 7,
+      "rating": "good",
+      "id": 10
     }
   ],
   "Users": [
