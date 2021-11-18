@@ -260,7 +260,7 @@ var observer = new MutationObserver(function () {
       const childNode = document.getElementsByClassName(
         `comment-section${parentNodeId}`
       )[0];
-      childNode.classList.toggle("display-none");
+      childNode.classList.toggle("display-block");
       console.log(childNode);
     };
   }
