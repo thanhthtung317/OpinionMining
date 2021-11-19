@@ -104,6 +104,8 @@ form .input-box span.details{
    margin: 35px 0
  }
  form .button input{
+   text-align: center;
+   margin-top: 0.2em;
    height: 100%;
    width: 100%;
    border-radius: 5px;

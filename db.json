@@ -29,46 +29,11 @@
       "id": 2
     },
     {
-      "content": "too tired",
-      "dateCreate": "17/11/2021 - 14:9:0",
-      "idUser": 0,
+      "content": "mnlkkl",
+      "dateCreate": "20/11/2021 - 0:57:43",
+      "idUser": 3,
       "idAdmin": "admin1",
       "id": 3
-    },
-    {
-      "content": "now i need to make the post comment function ",
-      "dateCreate": "17/11/2021 - 16:16:32",
-      "idUser": 0,
-      "idAdmin": "admin1",
-      "id": 4
-    },
-    {
-      "content": "i feel awesome",
-      "dateCreate": "17/11/2021 - 16:31:15",
-      "idUser": 0,
-      "idAdmin": "admin1",
-      "id": 5
-    },
-    {
-      "content": "tllkjadflk;ajlk;sjdl;js sf lsd fjlkskfj",
-      "dateCreate": "17/11/2021 - 23:20:41",
-      "idUser": 0,
-      "idAdmin": "admin1",
-      "id": 6
-    },
-    {
-      "content": "tllkjadflk;ajlk;sjdl;js sf lsd fjlkskfj",
-      "dateCreate": "17/11/2021 - 23:20:41",
-      "idUser": 0,
-      "idAdmin": "admin1",
-      "id": 7
-    },
-    {
-      "content": "haizzz",
-      "dateCreate": "19/11/2021 - 1:26:0",
-      "idUser": 0,
-      "idAdmin": "admin1",
-      "id": 8
     }
   ],
   "Comments": [
@@ -82,76 +47,94 @@
       "rating": "good"
     },
     {
-      "id": 1,
-      "content": "this is a sample comment 2",
-      "dateCreate": "16/11/2021 - 15:38:52",
+      "content": "kmlm",
+      "dateCreate": "20/11/2021 - 0:24:25",
       "idUser": 0,
       "idAdmin": "admin1",
-      "idPost": 7,
-      "rating": "bad"
+      "idPost": 2,
+      "rating": "good",
+      "id": 1
     },
     {
-      "id": 2,
-      "content": "this is a sample comment 2",
-      "dateCreate": "16/11/2021 - 15:38:52",
+      "content": "kmmlkml",
+      "dateCreate": "20/11/2021 - 0:24:36",
       "idUser": 0,
       "idAdmin": "admin1",
-      "idPost": 5,
-      "rating": "bad"
+      "idPost": 1,
+      "rating": "good",
+      "id": 2
     },
     {
-      "content": "as;dlkjf;sldfj;ls",
-      "dateCreate": "18/11/2021 - 21:31:36",
+      "content": "mlkmlkm",
+      "dateCreate": "20/11/2021 - 0:25:16",
       "idUser": 0,
       "idAdmin": "admin1",
-      "idPost": 6,
+      "idPost": 2,
       "rating": "good",
       "id": 3
     },
     {
-      "content": "sdfsf",
-      "dateCreate": "18/11/2021 - 21:33:5",
+      "content": "kdjlkjd",
+      "dateCreate": "20/11/2021 - 0:26:59",
       "idUser": 0,
       "idAdmin": "admin1",
-      "idPost": 7,
+      "idPost": 0,
       "rating": "good",
       "id": 4
     },
     {
-      "content": "sdfsfsdfsdfsdfdfadfafasdf",
-      "dateCreate": "18/11/2021 - 21:33:30",
+      "content": "1",
+      "dateCreate": "20/11/2021 - 0:27:23",
       "idUser": 0,
       "idAdmin": "admin1",
-      "idPost": 7,
+      "idPost": 1,
       "rating": "good",
       "id": 5
     },
     {
-      "content": "sdfsdffsd",
-      "dateCreate": "18/11/2021 - 21:34:1",
+      "content": "2",
+      "dateCreate": "20/11/2021 - 0:27:37",
       "idUser": 0,
       "idAdmin": "admin1",
-      "idPost": 6,
+      "idPost": 2,
       "rating": "good",
       "id": 6
     },
     {
-      "content": "this is sample",
-      "dateCreate": "18/11/2021 - 21:34:15",
+      "content": "3",
+      "dateCreate": "20/11/2021 - 0:27:52",
       "idUser": 0,
       "idAdmin": "admin1",
-      "idPost": 6,
+      "idPost": 0,
       "rating": "good",
       "id": 7
     },
     {
-      "content": "shithole vl",
-      "dateCreate": "19/11/2021 - 1:26:12",
+      "content": "dick",
+      "dateCreate": "20/11/2021 - 0:56:15",
       "idUser": 0,
       "idAdmin": "admin1",
-      "idPost": 8,
+      "idPost": 1,
       "rating": "good",
       "id": 8
+    },
+    {
+      "content": "dfsdf",
+      "dateCreate": "20/11/2021 - 0:58:59",
+      "idUser": 3,
+      "idAdmin": "admin1",
+      "idPost": 2,
+      "rating": "good",
+      "id": 9
+    },
+    {
+      "content": "xin chào",
+      "dateCreate": "20/11/2021 - 0:59:41",
+      "idUser": 3,
+      "idAdmin": "admin1",
+      "idPost": 0,
+      "rating": "good",
+      "id": 10
     }
   ],
   "Users": [
@@ -171,7 +154,7 @@
       "email": "fjsdlkfj@dfsf",
       "gender": "male",
       "dateOfBirth": "2021-11-24",
-      "id": 5
+      "id": 1
     },
     {
       "userName": "becon",
@@ -180,7 +163,25 @@
       "email": "sdf@jlkf",
       "gender": "other",
       "dateOfBirth": "2021-11-10",
-      "id": 6
+      "id": 2
+    },
+    {
+      "userName": "haha lolo",
+      "password": "1234",
+      "address": "sfsd",
+      "email": "haha@email.com",
+      "gender": "male",
+      "dateOfBirth": "2021-11-22",
+      "id": 3
+    },
+    {
+      "userName": "ldfj;as",
+      "password": "qwe",
+      "address": "d6/161",
+      "email": "da.valaux@gmail.com",
+      "gender": "male",
+      "dateOfBirth": "2021-11-22",
+      "id": 4
     }
   ],
   "Admin": [

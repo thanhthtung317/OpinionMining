@@ -199,6 +199,16 @@ function getDate() {
   return datetime;
 }
 
+
+
+//RENDER USER INFO
+const userLoginInfo = JSON.parse(localStorage.getItem("userLogin"));
+const username = document.querySelector('.username');
+console.log(userLoginInfo);
+username.innerText = userLoginInfo.userName;
+
+
+
 //NEWFEEDS
 import addFeed from "./feedHandler.js";
 //ADD NEW POST
@@ -209,11 +219,11 @@ let postContent = "";
 newPostContent.oninput = (e) => {
   postContent = e.target.value;
 };
-async function createPost(content) {
+async function createPost(content, user) {
   const newPost = {
     content,
     dateCreate: getDate(),
-    idUser: 0,
+    idUser: user.id,
     idAdmin: "admin1",
   };
   try {
@@ -225,7 +235,7 @@ async function createPost(content) {
 }
 
 createPostBtn.addEventListener("click", (e) => {
-  createPost(postContent);
+  createPost(postContent, userLoginInfo);
 });
 
 //RENDER POSTS
@@ -295,7 +305,7 @@ var observer = new MutationObserver(function () {
       };
       createPostBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        createComment(postContent, Number(commentInputId));
+        createComment(postContent, Number(commentInputId), userLoginInfo);
       });
     };
   }
@@ -307,11 +317,11 @@ observer.observe(divArray, {
   subtree: true,
 });
 
-async function createComment(content, idPost) {
+async function createComment(content, idPost,user) {
   const newComment = {
     content,
     dateCreate: getDate(),
-    idUser: 0,
+    idUser: user.id,
     idAdmin: "admin1",
     idPost,
     rating: "good",
@@ -323,5 +333,14 @@ async function createComment(content, idPost) {
     console.error(error);
   }
 }
+
+
+//LOGOUT FEATURE
+
+const logout = document.querySelector(".logout-item");
+logout.addEventListener("click", () =>{
+  localStorage.removeItem("userLogin");
+  location.replace("../LoginAndRegister/login.html");
+})
 
 // END
