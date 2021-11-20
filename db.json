@@ -97,7 +97,7 @@
   "Users": [
     {
       "id": 0,
-      "dateOfBirth": "07/09/1998",
+      "dateOfBirth": "2021-11-09",
       "address": "CA",
       "userName": "littlefox",
       "password": "1234",
@@ -121,12 +121,30 @@
       "gender": "male",
       "dateOfBirth": "2021-11-17",
       "id": 2
+    },
+    {
+      "userName": ";lkjsdfl;kj",
+      "password": "jkl",
+      "address": "sfsd",
+      "email": "thanhtung@email.com",
+      "gender": "male",
+      "dateOfBirth": "2021-11-22",
+      "id": 3
+    },
+    {
+      "userName": "dlmhfkjdsh",
+      "password": "uio",
+      "address": "sfsd",
+      "email": "thanhtung2@email.com",
+      "gender": "male",
+      "dateOfBirth": "2021-11-17",
+      "id": 4
     }
   ],
   "Admin": [
     {
       "id": 0,
-      "dateOfBirth": "06/09/1997",
+      "dateOfBirth": "2021-11-09",
       "address": "NA",
       "userName": "admin1",
       "password": "1234",

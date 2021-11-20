@@ -36,14 +36,19 @@ async function userRegistration() {
   };
   if (passwordConfirmationCheck(userInfo.password, passwordConfirm.value)) {
     try {
-      await axios.post("http://localhost:3000/Users", userInfo);
+        const users = await getUsers();
+        const emailExisted = users.map((user)=>user.email);
+        if (emailCheck(email.value, emailExisted)) {
+          await axios.post("http://localhost:3000/Users", userInfo);
+        }else{
+          alert("Email already exists!")
+        }
     } catch (error) {
       console.log(error);
     }
   } else {
     alert("Password comfirm does not match password!");
   }
-   
 }
 
 registerBtn.addEventListener("click", () => {
@@ -59,3 +64,20 @@ login.addEventListener("click", () => {
   location.replace("../LoginAndRegister/login.html");
 });
 
+function emailCheck(email, emailExisted){
+  for (let i = 0; i < emailExisted.length; i++){
+    if (email === emailExisted[i]){
+      return false;
+    }
+  }
+  return true;
+}
+
+async function getUsers(){
+  try {
+    const response = await axios.get("http://localhost:3000/Users");
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
