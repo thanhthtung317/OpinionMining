@@ -55,7 +55,7 @@ async function getComment(post) {
     let commentRendered = "";
     try {
     const response = await axios.get("http://localhost:3000/Comments");
-    for (let i = response.data.length - 1; i >= 0; i--) {
+    for (let i = 0; i < response.data.length; ++i) {
         if (response.data[i].idPost === post.id) {
             const user = await getUser(response.data[i].idUser);
             commentRendered += `<div class="user-comment">
