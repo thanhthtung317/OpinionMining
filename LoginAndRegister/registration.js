@@ -5,6 +5,7 @@ const dayOfBirth = document.querySelector(".day-of-birth");
 const address = document.querySelector(".address");
 const email = document.querySelector(".email");
 const submitBtn = document.querySelector('input[type="submit"]');
+const registerBtn = document.querySelector(".register-btn");
 
 function getGender() {
   const gender = document.getElementsByName("gender");
@@ -36,7 +37,6 @@ async function userRegistration() {
   if (passwordConfirmationCheck(userInfo.password, passwordConfirm.value)) {
     try {
       await axios.post("http://localhost:3000/Users", userInfo);
-       location.replace("./login.html");
     } catch (error) {
       console.log(error);
     }
@@ -46,7 +46,16 @@ async function userRegistration() {
    
 }
 
+registerBtn.addEventListener("click", () => {
+  if (username.value !== '' && password.value !== '' && email.value !== '' && getGender() !== ''){
+    userRegistration();
+  } else {
+    alert("Please fill out all the information!");
+  }
+});
+
 const login = document.querySelector(".login");
 login.addEventListener("click", () => {
   location.replace("../LoginAndRegister/login.html");
 });
+

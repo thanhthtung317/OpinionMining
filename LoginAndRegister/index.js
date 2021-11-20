@@ -25,8 +25,6 @@ form.addEventListener('submit', function(e){
           location.replace(
             "../mainApp/index.html"
           );
-        }else{
-          alert("email or password wrong!")
         }
       }
     })()
