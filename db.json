@@ -16,17 +16,10 @@
     },
     {
       "content": "hello world",
-      "dateCreate": "15/11/2021 - 23:37:21",
-      "idUser": 0,
+      "dateCreate": "20/11/2021 - 16:57:54",
+      "idUser": 1,
       "idAdmin": "admin1",
       "id": 1
-    },
-    {
-      "content": "suck",
-      "dateCreate": "20/11/2021 - 14:8:43",
-      "idUser": 2,
-      "idAdmin": "admin1",
-      "id": 2
     }
   ],
   "Comments": [
@@ -40,58 +33,22 @@
       "rating": "good"
     },
     {
-      "content": "hello",
-      "dateCreate": "20/11/2021 - 14:8:56",
-      "idUser": 2,
+      "content": "jkljlkj",
+      "dateCreate": "20/11/2021 - 16:56:21",
+      "idUser": 1,
       "idAdmin": "admin1",
-      "idPost": 1,
+      "idPost": 0,
       "rating": "good",
       "id": 1
     },
     {
-      "content": "hello",
-      "dateCreate": "20/11/2021 - 14:8:56",
-      "idUser": 2,
+      "content": "this is a sample comment",
+      "dateCreate": "20/11/2021 - 16:58:10",
+      "idUser": 1,
       "idAdmin": "admin1",
       "idPost": 1,
       "rating": "good",
       "id": 2
-    },
-    {
-      "content": "whatsup",
-      "dateCreate": "20/11/2021 - 14:9:13",
-      "idUser": 2,
-      "idAdmin": "admin1",
-      "idPost": 1,
-      "rating": "good",
-      "id": 3
-    },
-    {
-      "content": "no it's too hot today",
-      "dateCreate": "20/11/2021 - 14:9:35",
-      "idUser": 2,
-      "idAdmin": "admin1",
-      "idPost": 0,
-      "rating": "good",
-      "id": 4
-    },
-    {
-      "content": "really, i thougj it was chill",
-      "dateCreate": "20/11/2021 - 14:10:27",
-      "idUser": 0,
-      "idAdmin": "admin1",
-      "idPost": 0,
-      "rating": "good",
-      "id": 5
-    },
-    {
-      "content": "hellu",
-      "dateCreate": "20/11/2021 - 14:10:36",
-      "idUser": 0,
-      "idAdmin": "admin1",
-      "idPost": 2,
-      "rating": "good",
-      "id": 6
     }
   ],
   "Users": [
@@ -105,40 +62,13 @@
       "gender": "male"
     },
     {
-      "userName": "sdf",
-      "password": "sdf",
-      "address": "dfs",
-      "email": "dfs@sdf",
-      "gender": "male",
-      "dateOfBirth": "2021-11-09",
-      "id": 1
-    },
-    {
       "userName": "thanh tùng",
       "password": "1234",
-      "address": "dkf;dlskf",
+      "address": "hcmc",
       "email": "thanhtung@email.com",
       "gender": "male",
-      "dateOfBirth": "2021-11-17",
-      "id": 2
-    },
-    {
-      "userName": ";lkjsdfl;kj",
-      "password": "jkl",
-      "address": "sfsd",
-      "email": "thanhtung@email.com",
-      "gender": "male",
-      "dateOfBirth": "2021-11-22",
-      "id": 3
-    },
-    {
-      "userName": "dlmhfkjdsh",
-      "password": "uio",
-      "address": "sfsd",
-      "email": "thanhtung2@email.com",
-      "gender": "male",
-      "dateOfBirth": "2021-11-17",
-      "id": 4
+      "dateOfBirth": "2001-07-31",
+      "id": 1
     }
   ],
   "Admin": [
