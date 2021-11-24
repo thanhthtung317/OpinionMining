@@ -204,8 +204,10 @@ function getDate() {
 //RENDER USER INFO
 const userLoginInfo = JSON.parse(localStorage.getItem("userLogin"));
 const username = document.querySelector('.username');
+const userIdProfileText = document.querySelector(".profile-text");
 console.log(userLoginInfo);
 username.innerText = userLoginInfo.userName;
+userIdProfileText.innerText = `id: ${userLoginInfo.idUser}`;
 
 
 
@@ -223,12 +225,15 @@ async function createPost(content, user) {
   const newPost = {
     content,
     dateCreate: getDate(),
-    idUser: user.id,
+    idUser: user.idUser,
     idAdmin: "admin1",
   };
   try {
     console.log(newPost);
-    const res = await axios.post("http://localhost:3000/Posts", newPost);
+    const res = await axios.post(
+      "http://localhost:5000/api/create_post",
+      newPost
+    );
   } catch (error) {
     console.error(error);
   }
@@ -241,9 +246,13 @@ createPostBtn.addEventListener("click", (e) => {
 //RENDER POSTS
 
 async function renderPosts() {
-  const response = await axios.get("http://localhost:3000/Posts");
-  for (let i = response.data.length - 1; i >= 0; i--) {
-    addFeed(response.data[i]);
+  const response = await axios.get("http://localhost:5000/api/get_post");
+  const posts = JSON.parse(response.data);
+  //  console.log(posts);
+ 
+  for (let i = posts.length - 1; i >= 0; i--) {
+    
+    addFeed(posts[i]);
   }
 }
 
@@ -321,14 +330,16 @@ async function createComment(content, idPost,user) {
   const newComment = {
     content,
     dateCreate: getDate(),
-    idUser: user.id,
-    idAdmin: "admin1",
+    idUser: user.idUser,
     idPost,
-    rating: "good",
+    ranked: "good",
   };
   try {
     console.log(newComment);
-    const res = await axios.post("http://localhost:3000/Comments", newComment);
+    const res = await axios.post(
+      "http://localhost:5000/api/user_create_cmt",
+      newComment
+    );
   } catch (error) {
     console.error(error);
   }

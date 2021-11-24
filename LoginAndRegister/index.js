@@ -32,9 +32,9 @@ form.addEventListener('submit', function(e){
 
 async function getUsers() {
   try {
-    const response = await axios.get("http://localhost:3000/Users");
+    const response = await axios.get("http://localhost:5000/api/get_user");
     console.log(response.data);
-    return response.data;
+    return JSON.parse(response.data);
   } catch (error) {
     console.log(error);
   }

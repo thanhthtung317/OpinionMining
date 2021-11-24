@@ -34,15 +34,21 @@ async function userRegistration() {
     gender: getGender(),
     dateOfBirth: dayOfBirth.value,
   };
+
   if (passwordConfirmationCheck(userInfo.password, passwordConfirm.value)) {
     try {
-        const users = await getUsers();
-        const emailExisted = users.map((user)=>user.email);
-        if (emailCheck(email.value, emailExisted)) {
-          await axios.post("http://localhost:3000/Users", userInfo);
-        }else{
-          alert("Email already exists!")
-        }
+      const users = await getUsers();
+      const emailExisted = users.map((user) => user.email);
+      if (emailCheck(email.value, emailExisted)) {
+        const res = await axios.post(
+          "http://localhost:5000/api/register",
+          userInfo
+        );
+        // const res = await axios.post("http://localhost:3000/Users", userInfo);
+        // alert(res.data);
+      } else {
+        alert("Email already exists!");
+      }
     } catch (error) {
       console.log(error);
     }
@@ -52,7 +58,12 @@ async function userRegistration() {
 }
 
 registerBtn.addEventListener("click", () => {
-  if (username.value !== '' && password.value !== '' && email.value !== '' && getGender() !== ''){
+  if (
+    username.value !== "" &&
+    password.value !== "" &&
+    email.value !== "" &&
+    getGender() !== ""
+  ) {
     userRegistration();
   } else {
     alert("Please fill out all the information!");
@@ -64,19 +75,20 @@ login.addEventListener("click", () => {
   location.replace("../LoginAndRegister/login.html");
 });
 
-function emailCheck(email, emailExisted){
-  for (let i = 0; i < emailExisted.length; i++){
-    if (email === emailExisted[i]){
+function emailCheck(email, emailExisted) {
+  for (let i = 0; i < emailExisted.length; i++) {
+    if (email === emailExisted[i]) {
       return false;
     }
   }
   return true;
 }
 
-async function getUsers(){
+async function getUsers() {
   try {
-    const response = await axios.get("http://localhost:3000/Users");
-    return response.data;
+    const response = await axios.get("http://localhost:5000/api/get_user");
+    console.log(typeof response.data)
+    return JSON.parse(response.data);
   } catch (error) {
     console.log(error);
   }

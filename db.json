@@ -20,6 +20,26 @@
       "idUser": 1,
       "idAdmin": "admin1",
       "id": 1
+    },
+    {
+      "content": "xin chào các bạn!",
+      "dateCreate": "20/11/2021 - 17:2:26",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "id": 2
+    },
+    {
+      "content": "hello!",
+      "dateCreate": "20/11/2021 - 17:5:42",
+      "idUser": 3,
+      "idAdmin": "admin1",
+      "id": 3
+    },
+    {
+      "content": "jlkhkhjhjk",
+      "dateCreate": "23/11/2021 - 15:57:44",
+      "idAdmin": "admin1",
+      "id": 4
     }
   ],
   "Comments": [
@@ -58,6 +78,51 @@
       "idPost": 1,
       "rating": "good",
       "id": 3
+    },
+    {
+      "content": "how it's going mate?",
+      "dateCreate": "20/11/2021 - 17:2:48",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "idPost": 2,
+      "rating": "good",
+      "id": 4
+    },
+    {
+      "content": "chào bạn!",
+      "dateCreate": "20/11/2021 - 17:4:3",
+      "idUser": 2,
+      "idAdmin": "admin1",
+      "idPost": 2,
+      "rating": "good",
+      "id": 5
+    },
+    {
+      "content": "hello! nice",
+      "dateCreate": "20/11/2021 - 17:5:57",
+      "idUser": 3,
+      "idAdmin": "admin1",
+      "idPost": 3,
+      "rating": "good",
+      "id": 6
+    },
+    {
+      "content": "chào các bạn!",
+      "dateCreate": "20/11/2021 - 17:6:16",
+      "idUser": 3,
+      "idAdmin": "admin1",
+      "idPost": 2,
+      "rating": "good",
+      "id": 7
+    },
+    {
+      "content": "hellu!",
+      "dateCreate": "20/11/2021 - 17:6:54",
+      "idUser": 0,
+      "idAdmin": "admin1",
+      "idPost": 3,
+      "rating": "good",
+      "id": 8
     }
   ],
   "Users": [
@@ -78,6 +143,24 @@
       "gender": "male",
       "dateOfBirth": "2001-07-31",
       "id": 1
+    },
+    {
+      "userName": "becon",
+      "password": "qwe",
+      "address": "dfjksdjf",
+      "email": "becon@email.com",
+      "gender": "male",
+      "dateOfBirth": "2021-11-16",
+      "id": 2
+    },
+    {
+      "userName": "thanh tùng",
+      "password": "1234",
+      "address": "hcmc",
+      "email": "thanhtung4@email.com",
+      "gender": "male",
+      "dateOfBirth": "2021-11-22",
+      "id": 3
     }
   ],
   "Admin": [
