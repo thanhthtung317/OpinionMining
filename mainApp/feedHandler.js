@@ -11,7 +11,7 @@ function addFeed(post) {
         feed.classList.add("feed");
         feed.innerHTML = `
                         <div class="head">
-                            <div class="user">
+                            <div class="user${idUser} user">
                                 <div class="profile-photo">
                                     <img src="https://i.pinimg.com/originals/0c/3b/3a/0c3b3adb1a7530892e55ef36d3be6cb8.png">
                                 </div>
@@ -20,8 +20,8 @@ function addFeed(post) {
                                     <small>${dateCreate}</small>
                                 </div>
                             </div>
-                            <span class="edit">
-                                <i class="uil uil-ellipsis-h"></i>
+                            <span class="delete-post">
+                                <span><i title="Delete Post" class="uil uil-minus-circle"></i></span>
                             </span>
                         </div>
                         <div class="photo">

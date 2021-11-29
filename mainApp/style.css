@@ -310,6 +310,14 @@ main .container .left .profile {
 }
 
 /* ---------------------- FEEDS --------------------- */
+.delete-post{
+  font-size:2em;
+  cursor: pointer;
+}
+
+.delete-post:hover{
+  color: red;
+}
 .view-commnents .toggle-comments{
   cursor: pointer;
 }

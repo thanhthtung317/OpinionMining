@@ -234,6 +234,7 @@ async function createPost(content, user) {
       "http://localhost:5000/api/create_post",
       newPost
     );
+     location.reload();
   } catch (error) {
     console.error(error);
   }
@@ -273,7 +274,7 @@ var observer = new MutationObserver(function () {
     ++i
   ) {
     commentSections[i].onclick = (e) => {
-      e.target.classList.toggle("display-block");
+      // e.target.classList.toggle("display-block");
       const parentNode = String(e.target.classList[0]);
       const parentNodeId = parentNode.charAt(parentNode.length - 1);
       const childNode = document.getElementsByClassName(
@@ -340,11 +341,56 @@ async function createComment(content, idPost,user) {
       "http://localhost:5000/api/user_create_cmt",
       newComment
     );
+    location.reload();
   } catch (error) {
     console.error(error);
   }
 }
 
+//DELETE POST
+var observer = new MutationObserver(function () {
+  var postSections = document.getElementsByClassName("delete-post");
+  for (
+    let i = 0;
+    i < postSections.length;
+    ++i
+  ) {
+    postSections[i].onclick = (e) => {
+      const post =
+        String(document.getElementsByClassName("toggle-comments")[i].classList[0]);
+
+      const user = String(
+        document.getElementsByClassName("user")[i].classList[0]
+      );
+
+      const postId = post.charAt(post.length - 1);
+
+      const userId = user.charAt(user.length - 1);
+
+      if (Number(userId) === userLoginInfo.idUser){
+        deletePost(postId);
+      }else{
+        alert("you are not the owner of this post")
+      } 
+      console.log("userId:" + userId);
+    };
+  }
+});
+
+observer.observe(divArray, {
+  attributes: false,
+  childList: true,
+  subtree: true,
+});
+
+async function deletePost(postId){
+  try {
+    await axios.delete(`http://localhost:5000/api/delete_post/${postId}`);
+    location.reload();
+  } catch (error) {
+    console.log("error")
+  }
+}
 
 //LOGOUT FEATURE
 
@@ -353,5 +399,12 @@ logout.addEventListener("click", () =>{
   localStorage.removeItem("userLogin");
   location.replace("../LoginAndRegister/login.html");
 })
+
+//GO TO ADMIN DASHBOARD
+const adminDashboard = document.querySelector(".analytics-item");
+adminDashboard.addEventListener("click", () => {
+  // localStorage.removeItem("userLogin");
+  location.replace("../LoginAndRegister/loginAdmin.html");
+});
 
 // END
