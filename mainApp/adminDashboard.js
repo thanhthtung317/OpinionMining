@@ -1,4 +1,4 @@
-const comments = document.querySelector('.comments-number');
+const comments = document.querySelector(".comments-number");
 const posts = document.querySelector(".posts-number");
 const goodComments = document.querySelector(".good-comments-number");
 const badComments = document.querySelector(".bad-comments-number");
@@ -31,7 +31,6 @@ async function getPost() {
   }
 }
 
-
 function renderRecentKeyword(keyword) {
   (async () => {
     const table = document.querySelector("table");
@@ -52,31 +51,46 @@ function renderRecentKeyword(keyword) {
 }
 
 function goodCommentsCounter(keyword) {
-  (async () => {
-    
-  })();
+  (async () => {})();
 }
 
-
 (async () => {
-    const commentsNumber = await getComment();
-    comments.innerHTML = commentsNumber.length;
+  const myChart = document.querySelector("#myChart").getContext("2d");
+  console.log(myChart);
 
-     const postsNumber = await getPost();
-     posts.innerHTML = postsNumber.length;
+  const commentsNumber = await getComment();
+  comments.innerHTML = commentsNumber.length;
 
-     let goodcommetsCounter = 0;
-     let badCommentsCounter = 0;
-     for (let i = 0; i < commentsNumber.length; i++) {
-       if (commentsNumber[i].ranked === "GOOD") {
-         goodcommetsCounter += 1;
-       }else{
-        badCommentsCounter += 1;
-       }
-     }
+  const postsNumber = await getPost();
+  posts.innerHTML = postsNumber.length;
 
-     goodComments.innerHTML = goodcommetsCounter;
-     badComments.innerHTML = badCommentsCounter;
+  let goodcommetsCounter = 0;
+  let badCommentsCounter = 0;
+  for (let i = 0; i < commentsNumber.length; i++) {
+    if (commentsNumber[i].ranked === "GOOD") {
+      goodcommetsCounter += 1;
+    } else {
+      badCommentsCounter += 1;
+    }
+  }
+
+  goodComments.innerHTML = goodcommetsCounter;
+  badComments.innerHTML = badCommentsCounter;
+
+  let pieChart = new Chart(myChart, {
+    type: "pie",
+    data: {
+      labels: ["Good Comments", "Bad Comments"],
+      datasets: [
+        {
+          label: "bad comments vs good comments",
+          data: [goodcommetsCounter, badCommentsCounter],
+          backgroundColor: ["#60d6c5", "#ff6183"],
+        },
+      ],
+    },
+    options: {},
+  });
 
   const recentKeywords = await getKeyword();
   for (let i = recentKeywords.length; i > recentKeywords.length - 10; i--) {
