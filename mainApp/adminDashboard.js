@@ -6,7 +6,7 @@ const badComments = document.querySelector(".bad-comments-number");
 async function getKeyword() {
   try {
     const response = await axios.get(
-      "http://localhost:5000/api/ad_get_keyword"
+      "http://localhost:5000/api/ad_get_keyword_20"
     );
     return JSON.parse(response.data);
   } catch (error) {
@@ -50,10 +50,6 @@ function renderRecentKeyword(keyword) {
   })();
 }
 
-function goodCommentsCounter(keyword) {
-  (async () => {})();
-}
-
 (async () => {
   const myChart = document.querySelector("#myChart").getContext("2d");
   console.log(myChart);
@@ -92,8 +88,10 @@ function goodCommentsCounter(keyword) {
     options: {},
   });
 
+
   const recentKeywords = await getKeyword();
   for (let i = recentKeywords.length; i > recentKeywords.length - 10; i--) {
     renderRecentKeyword(recentKeywords[i]);
   }
 })();
+

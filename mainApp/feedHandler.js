@@ -2,6 +2,7 @@ function addFeed(post) {
     const newFeeds = document.querySelector(".feeds");
     let { content, dateCreate, idPost, idUser } = post;
     let commentsRendered = "";
+    console.log(idPost);
     (async () => {
     const user = await getUser(idUser);
     commentsRendered = await getComment(post, user);
@@ -11,7 +12,7 @@ function addFeed(post) {
         feed.classList.add("feed");
         feed.innerHTML = `
                         <div class="head">
-                            <div class="user${idUser} user">
+                            <div class="user-${idUser} user">
                                 <div class="profile-photo">
                                     <img src="https://i.pinimg.com/originals/0c/3b/3a/0c3b3adb1a7530892e55ef36d3be6cb8.png">
                                 </div>
@@ -31,8 +32,8 @@ function addFeed(post) {
                             <p>${content}</p>
                         </div>
                         <div class="comments text-muted view-commnents">
-                            <p class="toggle-comments${idPost} toggle-comments">View all comments</p>
-                            <div class="comment-section${idPost} comment-section">
+                            <p class="toggle-comments-${idPost} toggle-comments">View all comments</p>
+                            <div class="comment-section-${idPost} comment-section">
                                 <!-- comment -->
                                 ${commentsRendered}
                                 <!-- end of comment  -->
@@ -41,9 +42,9 @@ function addFeed(post) {
                         <div class="comment-input-section">
                             <div class="comment">
                                 <i class="uil uil-comment-dots"></i>
-                                <input class="comment-input${idPost} comment-input" type="text" placeholder="What do you think?">
+                                <input class="comment-input-${idPost} comment-input" type="text" placeholder="What do you think?">
                             </div>
-                            <button class="btn-create-comment${idPost} btn btn-primary" type='submit'>Reply</button>
+                            <button class="btn-create-comment-${idPost} btn btn-primary" type='submit'>Reply</button>
                         </div>
                     `;
 

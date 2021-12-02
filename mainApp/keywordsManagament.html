@@ -26,18 +26,18 @@
       <div class="sidebar-menu">
         <ul>
           <li>
-            <a href="#" class="active">
+            <a href="./adminDashboard.html">
               <span>Dashboard</span>
               <i class="fa-solid fa-chart-line"></i>
             </a>
           </li>
           <li>
-            <a href="./keywordsManagament.html">
+            <a href="#" class="active">
               <span>Keyword</span>
               <i class="fa-solid fa-plus"></i>
             </a>
           </li>
-           <li>
+          <li>
             <a href="./index.html">
               <span>Main App</span>
                 <i class="fas fa-tv"></i>
@@ -75,49 +75,30 @@
       </header>
 
       <main>
-        <div class="cards">
-          <div class="card-single">
-            <div>
-              <h3 class= 'posts-number'>0</h3>
-              <span class= 'posts'>posts</span>
+       <div>
+         <div class="add-keyword-container">
+            <div class="input-box">
+              <span class="details">Category</span>
+              <input type="text" class="category-input" placeholder="Enter keyword category" required>
             </div>
-            <div>
-              <i class="far fa-window-restore"></i>
+            <div class="input-box">
+              <span class="details">Content</span>
+              <input type="text" class="content-input" placeholder="Enter content" required>
             </div>
-          </div>
-          <div class="card-single">
-            <div>
-              <h3 class= 'comments-number'>0</h3>
-              <span class='comments'>conmmets</span>
+            <div class="input-box">
+              <span class="details">Score</span>
+              <input type="text" class="score-input" placeholder="Enter keyword score" required>
             </div>
-            <div>
-              <i class="fa-regular fa-comments"></i>
-            </div>
-          </div>
-          <div class="card-single">
-            <div>
-              <h3 class= 'bad-comments-number'>0</h3>
-              <span class="bad-comments">bad conmmets</span>
-            </div>
-            <div>
-              <i class="far fa-angry"></i>
-            </div>
-          </div>
-          <div class="card-single">
-            <div>
-              <h3 class= 'good-comments-number'>0</h3>
-              <span class="good-comments"> good conmmets</span>
-            </div>
-            <div>
-              <i class="far fa-smile-beam"></i>
-            </div>
-          </div>
         </div>
+        <button class="add-keyword-btn">
+          ADD KEYWORD
+        </button>
+       </div>
         <div class="recent-grid">
           <div class="projects">
             <div class="card">
               <div class="card-header">
-                <h2>Recently Added Keyword</h2>
+                <h2>All Keyword</h2>
                 <!-- <button>
                     see all
                 </button> -->
@@ -147,13 +128,13 @@
           <div class="customers">
             <div class="card">
               <div class="chart-title card-header">
-                <h2>Good Comments VS Bad Comments</h2>
+                <h2>Positive Keywords VS Negative Keywords</h2>
                 <!-- <button>
                     see all
                 </button> -->
               </div>
               <div class="card-body">
-                <canvas id="myChart">
+                <canvas id="myChart2">
 
                 </canvas>
               </div>
@@ -163,6 +144,6 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./adminDashboard.js"></script>
+    <script src="./keywordsHandler.js"></script>
   </body>
 </html>

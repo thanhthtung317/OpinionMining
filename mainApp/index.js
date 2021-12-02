@@ -276,9 +276,9 @@ var observer = new MutationObserver(function () {
     commentSections[i].onclick = (e) => {
       // e.target.classList.toggle("display-block");
       const parentNode = String(e.target.classList[0]);
-      const parentNodeId = parentNode.charAt(parentNode.length - 1);
+      const parentNodeId = parentNode.split("-")[2];
       const childNode = document.getElementsByClassName(
-        `comment-section${parentNodeId}`
+        `comment-section-${parentNodeId}`
       )[0];
       childNode.classList.toggle("display-block");
       console.log(childNode);
@@ -303,10 +303,13 @@ var observer = new MutationObserver(function () {
   for (let i = 0; i < commentInputSections.length; ++i) {
     commentInputSections[i].onclick = (e) => {
       const commentInput = String(e.target.classList[0]);
-      const commentInputId = commentInput.charAt(commentInput.length - 1);
+      // const commentInputId = commentInput.charAt(commentInput.length - 1);
+      const commentInputId = commentInput.split("-")[2];
+      console.log(commentInput)
       console.log(commentInputId);
+      console.log(typeof commentInput);
       const createPostBtn = document.getElementsByClassName(
-        `btn-create-comment${commentInputId}`
+        `btn-create-comment-${commentInputId}`
       )[0];
       console.log(createPostBtn);
       e.target.oninput = (e) => {
@@ -363,9 +366,11 @@ var observer = new MutationObserver(function () {
         document.getElementsByClassName("user")[i].classList[0]
       );
 
-      const postId = post.charAt(post.length - 1);
+      const postId = post.split('-')[2];
 
-      const userId = user.charAt(user.length - 1);
+      const userId = user.split("-")[1];
+
+      console.log(userId);
 
       if (Number(userId) === userLoginInfo.idUser){
         deletePost(postId);
