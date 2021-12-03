@@ -375,7 +375,7 @@ var observer = new MutationObserver(function () {
       if (Number(userId) === userLoginInfo.idUser){
         deletePost(postId);
       }else{
-        alert("you are not the owner of this post")
+        alert("You Are Not The Owner Of This Post")
       } 
       console.log("userId:" + userId);
     };

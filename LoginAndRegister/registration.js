@@ -4,15 +4,18 @@ const passwordConfirm = document.querySelector(".password-confirm");
 const dayOfBirth = document.querySelector(".day-of-birth");
 const address = document.querySelector(".address");
 const email = document.querySelector(".email");
+const gender = document.getElementsByName("gender");
 const submitBtn = document.querySelector('input[type="submit"]');
 const registerBtn = document.querySelector(".register-btn");
 
+// console.log(gender[1].value)
 function getGender() {
-  const gender = document.getElementsByName("gender");
   for (var i = 0, length = gender.length; i < length; i++) {
     if (gender[i].checked) {
+      // alert(i);
       return gender[i].value;
     } else {
+      // alert("Please select")
       return "other";
     }
   }
@@ -37,6 +40,7 @@ async function userRegistration() {
 
   if (passwordConfirmationCheck(userInfo.password, passwordConfirm.value)) {
     try {
+      // alert(getGender())
       const users = await getUsers();
       const emailExisted = users.map((user) => user.email);
       if (emailCheck(email.value, emailExisted)) {
@@ -44,17 +48,17 @@ async function userRegistration() {
           "http://localhost:5000/api/register",
           userInfo
         );
-        alert("register successs");
+        alert("Register Successs");
         // const res = await axios.post("http://localhost:3000/Users", userInfo);
         // alert(res.data);
       } else {
-        alert("Email already exists!");
+        alert("Email Already Exists!");
       }
     } catch (error) {
       console.log(error);
     }
   } else {
-    alert("Password comfirm does not match password!");
+    alert("Password Comfirm Does Not Match Password!");
   }
 }
 
@@ -67,7 +71,7 @@ registerBtn.addEventListener("click", () => {
   ) {
     userRegistration();
   } else {
-    alert("Please fill out all the information!");
+    alert("Please Fill Out All The Information!");
   }
 });
 

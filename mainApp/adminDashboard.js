@@ -76,7 +76,7 @@ function renderRecentKeyword(keyword) {
   let pieChart = new Chart(myChart, {
     type: "pie",
     data: {
-      labels: ["Good Comments", "Bad Comments"],
+      labels: ["Good", "Bad"],
       datasets: [
         {
           label: "bad comments vs good comments",
