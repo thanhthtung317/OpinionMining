@@ -26,7 +26,7 @@ function addFeed(post) {
                             </span>
                         </div>
                         <div class="photo">
-                            <img src="./images/feed-1.jpg">
+                            <img src="https://images.pexels.com/photos/96622/pexels-photo-96622.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
                         </div>
                         <div class="caption">
                             <p>${content}</p>
