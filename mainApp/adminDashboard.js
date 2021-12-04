@@ -58,6 +58,7 @@ function renderRecentKeyword(keyword) {
   comments.innerHTML = commentsNumber.length;
 
   const postsNumber = await getPost();
+  console.log(postsNumber);
   posts.innerHTML = postsNumber.length;
 
   let goodcommetsCounter = 0;
