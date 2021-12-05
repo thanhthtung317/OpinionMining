@@ -92,7 +92,7 @@ function emailCheck(email, emailExisted) {
 async function getUsers() {
   try {
     const response = await axios.get("http://localhost:5000/api/get_user");
-    console.log(typeof response.data)
+    // console.log(typeof response.data)
     return JSON.parse(response.data);
   } catch (error) {
     console.log(error);

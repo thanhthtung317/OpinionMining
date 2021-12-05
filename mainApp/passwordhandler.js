@@ -3,7 +3,7 @@ const passwordConfirm = document.querySelector(".password-confirm");
 const oldPassword = document.querySelector(".old-password");
 const userInfo = JSON.parse(localStorage.getItem("userLogin"));
 const submitBtn = document.querySelector(".update-password-btn");
-console.log(userInfo);
+// console.log(userInfo);
 
 function passwordConfirmationCheck(password, passwordConfirm) {
   if (password !== passwordConfirm) {

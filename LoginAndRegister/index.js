@@ -16,8 +16,8 @@ form.addEventListener('submit', function(e){
     e.preventDefault();
     (async () => {
       const users = await getUsers();
-      console.log(users[0].email);
-      console.log(users[0].password);
+      // console.log(users[0].email);
+      // console.log(users[0].password);
 
       for(let i = 0; i < users.length; i++){
         if (users[i].email === email && users[i].password === password){

@@ -1,5 +1,4 @@
-// import "regenerator-runtime/runtime";
-// import axios from "axios";
+
 // SIDEBAR
 const menuItems = document.querySelectorAll(".menu-item");
 
@@ -229,7 +228,7 @@ async function createPost(content, user) {
     idAdmin: "admin1",
   };
   try {
-    console.log(newPost);
+    // console.log(newPost);
     const res = await axios.post(
       "http://localhost:5000/api/create_post",
       newPost
@@ -281,7 +280,7 @@ var observer = new MutationObserver(function () {
         `comment-section-${parentNodeId}`
       )[0];
       childNode.classList.toggle("display-block");
-      console.log(childNode);
+      // console.log(childNode);
     };
   }
 });
@@ -305,16 +304,13 @@ var observer = new MutationObserver(function () {
       const commentInput = String(e.target.classList[0]);
       // const commentInputId = commentInput.charAt(commentInput.length - 1);
       const commentInputId = commentInput.split("-")[2];
-      console.log(commentInput)
-      console.log(commentInputId);
-      console.log(typeof commentInput);
       const createPostBtn = document.getElementsByClassName(
         `btn-create-comment-${commentInputId}`
       )[0];
-      console.log(createPostBtn);
+      // console.log(createPostBtn);
       e.target.oninput = (e) => {
         postContent = e.target.value;
-        console.log(commentInputId, postContent);
+        // console.log(commentInputId, postContent);
       };
       createPostBtn.addEventListener("click", (e) => {
         e.preventDefault();
@@ -339,7 +335,7 @@ async function createComment(content, idPost,user) {
     ranked: "good",
   };
   try {
-    console.log(newComment);
+    // console.log(newComment);
     const res = await axios.post(
       "http://localhost:5000/api/user_create_cmt",
       newComment
@@ -370,14 +366,14 @@ var observer = new MutationObserver(function () {
 
       const userId = user.split("-")[1];
 
-      console.log(userId);
+      // console.log(userId);
 
       if (Number(userId) === userLoginInfo.idUser){
         deletePost(postId);
       }else{
         alert("You Are Not The Owner Of This Post")
       } 
-      console.log("userId:" + userId);
+      // console.log("userId:" + userId);
     };
   }
 });

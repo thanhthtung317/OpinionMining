@@ -7,7 +7,7 @@ const goBackBtn = document.querySelector('.go-back-btn');
 const updateBtn = document.querySelector('.update-btn');
 const userInfo = JSON.parse(localStorage.getItem('userLogin'));
 
-console.log(userInfo);
+// console.log(userInfo);
 
 username.value = userInfo.userName;
 dayOfBirth.value = userInfo.dateOfBirth;
