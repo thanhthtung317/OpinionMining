@@ -52,18 +52,18 @@ async function createKeyword(category, content, score) {
 
 (async() => {
     addKeywordBtn.onclick = () => {
-        createKeyword(category.value, content.value, score.value);
+        createKeyword(category.value.trim().toLowerCase(), content.value.trim(), Number(score.value.trim()));
     };
 
     const keywords = await getKeyword();
-    for (let i = keywords.length; i > keywords.length - 10; i--) {
+    for (let i = keywords.length; i > 0; i--) {
       renderRecentKeyword(keywords[i]);
     }
 
     let positiveKeywords = 0;
     let negativeKeywords = 0;
       for (let i = 0; i < keywords.length; i++) {
-        if (keywords[i].category === "positive") {
+        if (keywords[i].category.toLowerCase() === "positive") {
           positiveKeywords += 1;
         } else {
           negativeKeywords += 1;
