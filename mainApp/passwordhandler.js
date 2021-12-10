@@ -40,8 +40,12 @@ async function updatePassword() {
       oldPassword.value.trim() === ""
     ) {
       alert("Please Fill Out All The Information!");
-    } else {
-      alert("Something Went Wrong!");
+    } else if (oldPassword.value !== userInfo.password) {
+      alert("Old password Is Not Correct!");
+    } else if (passwordConfirmationCheck(password.value, passwordConfirm.value) == false) {
+      alert("Password Does Not Match Password Confirm!")
+    }else {
+      alert('Something Went Wrong!')
     }
   } catch (error) {
     console.log(error);

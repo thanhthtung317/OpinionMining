@@ -1,4 +1,3 @@
-
 // SIDEBAR
 const menuItems = document.querySelectorAll(".menu-item");
 
@@ -198,17 +197,13 @@ function getDate() {
   return datetime;
 }
 
-
-
 //RENDER USER INFO
 const userLoginInfo = JSON.parse(localStorage.getItem("userLogin"));
-const username = document.querySelector('.username');
+const username = document.querySelector(".username");
 const userIdProfileText = document.querySelector(".profile-text");
 console.log(userLoginInfo);
 username.innerText = userLoginInfo.userName;
 userIdProfileText.innerText = `id: ${userLoginInfo.idUser}`;
-
-
 
 //NEWFEEDS
 import addFeed from "./feedHandler.js";
@@ -222,20 +217,24 @@ newPostContent.oninput = (e) => {
 };
 async function createPost(content, user) {
   const newPost = {
-    content,
+    content: content.trim(),
     dateCreate: getDate(),
     idUser: user.idUser,
     idAdmin: "admin1",
   };
-  try {
-    // console.log(newPost);
-    const res = await axios.post(
-      "http://localhost:5000/api/create_post",
-      newPost
-    );
-     location.reload();
-  } catch (error) {
-    console.error(error);
+  if (content.trim() !== "") {
+    try {
+      // console.log(newPost);
+      const res = await axios.post(
+        "http://localhost:5000/api/create_post",
+        newPost
+      );
+      location.reload();
+    } catch (error) {
+      console.error(error);
+    }
+  } else {
+    alert("Please Fill In The Content Of The Post");
   }
 }
 
@@ -249,9 +248,8 @@ async function renderPosts() {
   const response = await axios.get("http://localhost:5000/api/get_post");
   const posts = JSON.parse(response.data);
   //  console.log(posts);
- 
+
   for (let i = posts.length - 1; i >= 0; i--) {
-    
     addFeed(posts[i]);
   }
 }
@@ -326,53 +324,54 @@ observer.observe(divArray, {
   subtree: true,
 });
 
-async function createComment(content, idPost,user) {
+async function createComment(content, idPost, user) {
   const newComment = {
-    content,
+    content: content.trim(),
     dateCreate: getDate(),
     idUser: user.idUser,
     idPost,
     ranked: "good",
   };
-  try {
-    // console.log(newComment);
-    const res = await axios.post(
-      "http://localhost:5000/api/user_create_cmt",
-      newComment
-    );
-    location.reload();
-  } catch (error) {
-    console.error(error);
+  if (content.trim() !== ''){
+    try {
+      // console.log(newComment);
+      const res = await axios.post(
+        "http://localhost:5000/api/user_create_cmt",
+        newComment
+      );
+      location.reload();
+    } catch (error) {
+      console.error(error);
+    }
+  }else{
+    alert("Please Fill In The Content Of The Comment");
   }
 }
 
 //DELETE POST
 var observer = new MutationObserver(function () {
   var postSections = document.getElementsByClassName("delete-post");
-  for (
-    let i = 0;
-    i < postSections.length;
-    ++i
-  ) {
+  for (let i = 0; i < postSections.length; ++i) {
     postSections[i].onclick = (e) => {
-      const post =
-        String(document.getElementsByClassName("toggle-comments")[i].classList[0]);
+      const post = String(
+        document.getElementsByClassName("toggle-comments")[i].classList[0]
+      );
 
       const user = String(
         document.getElementsByClassName("user")[i].classList[0]
       );
 
-      const postId = post.split('-')[2];
+      const postId = post.split("-")[2];
 
       const userId = user.split("-")[1];
 
       // console.log(userId);
 
-      if (Number(userId) === userLoginInfo.idUser){
+      if (Number(userId) === userLoginInfo.idUser) {
         deletePost(postId);
-      }else{
-        alert("You Are Not The Owner Of This Post")
-      } 
+      } else {
+        alert("You Are Not The Owner Of This Post");
+      }
       // console.log("userId:" + userId);
     };
   }
@@ -384,22 +383,22 @@ observer.observe(divArray, {
   subtree: true,
 });
 
-async function deletePost(postId){
+async function deletePost(postId) {
   try {
     await axios.delete(`http://localhost:5000/api/delete_post/${postId}`);
     location.reload();
   } catch (error) {
-    console.log("error")
+    console.log("error");
   }
 }
 
 //LOGOUT FEATURE
 
 const logout = document.querySelector(".logout-item");
-logout.addEventListener("click", () =>{
+logout.addEventListener("click", () => {
   localStorage.removeItem("userLogin");
   location.replace("../LoginAndRegister/login.html");
-})
+});
 
 //GO TO ADMIN DASHBOARD
 const adminDashboard = document.querySelector(".analytics-item");
