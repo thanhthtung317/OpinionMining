@@ -776,6 +776,7 @@ MEDIA QUERIES FOR SMALL TABLETS AND MOBILE PHONES
   /* background-color: black; */
   height:20px;
   border-radius: 0 0 100rem 100rem;
+  color: black;
 }
 
 @keyframes ghost-move{

@@ -1,10 +1,10 @@
-let usernameDOM = document.querySelector("#username");
+let emailDOM = document.querySelector("#email");
 let passwordDOM = document.querySelector("#password");
 const form = document.querySelector('form');
 let email = '';
 let password = '';
 
-usernameDOM.oninput = (e) => {
+emailDOM.oninput = (e) => {
   email = e.target.value;
 };
 
